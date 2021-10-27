@@ -10,6 +10,9 @@ import { API, Auth } from "aws-amplify";
 import { ThemeProvider, baseStyles } from "@blend-ui/core";
 import { createGlobalStyle } from "styled-components";
 
+//Components
+import NavBar from "./components/NavBar";
+
 import sha512 from "crypto-js/sha512";
 import Base64 from "crypto-js/enc-base64";
 /*
