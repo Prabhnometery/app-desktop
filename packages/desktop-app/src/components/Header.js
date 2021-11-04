@@ -2,12 +2,13 @@ import React from "react";
 import {
   StyledNavBar,
   StyledNavMenu,
-} from "../pages/display-app/DataConsole.styled";
+} from "../pages/data-cloud/DataConsole.styled.js";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import { Box, Flex, Text, Button } from "@blend-ui/core";
 
 import { PrifinaLogo } from "./PrifinaLogo";
+import { ReactComponent as HomeIcon } from "../assets/home-icon.svg";
 
 export default function Header({ sidebar, sidebarData }) {
   return (

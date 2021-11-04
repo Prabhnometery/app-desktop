@@ -4,7 +4,7 @@ import { Box, Flex, Text, Button } from "@blend-ui/core";
 import {
   StyledBoxOne,
   StyledBoxTwo,
-} from "../pages/display-app/DataConsole.styled";
+} from "../pages/data-cloud/DataConsole.styled";
 
 import { ReactComponent as VectorFileImageOne } from "../assets/vector-file-one.svg";
 import { ReactComponent as DataSourcesImage } from "../assets/data-sources.svg";
