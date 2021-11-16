@@ -3,7 +3,6 @@ import React, { useState, useEffect, useCallback, useRef } from "react";
 
 import { Box, Flex, Text, Button } from "@blend-ui/core";
 import { ReactComponent as DefaultWidget } from "../assets/third-party-app.svg";
-import Header from "../components/Header";
 
 import styled, { createGlobalStyle } from "styled-components";
 import { StyledCard } from "../pages/data-cloud/DataConsole.styled";
@@ -16,7 +15,8 @@ import { ReactComponent as CloudIcon } from "../assets/cloud-icon.svg";
 
 import PropTypes from "prop-types";
 import { listDataSources } from "@prifina-apps/utils/dist/esm/graphql/queries";
-import Cards from "../components/Cards";
+import Cards from "./data-cloud/Cards";
+import Header from "./data-cloud/Header";
 
 const GlobalStyle = createGlobalStyle`
 .data-cloud  {

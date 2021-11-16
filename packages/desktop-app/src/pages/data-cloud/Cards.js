@@ -1,13 +1,10 @@
 import React from "react";
 import { Box, Flex, Text, Button } from "@blend-ui/core";
 
-import {
-  StyledBoxOne,
-  StyledBoxTwo,
-} from "../pages/data-cloud/DataConsole.styled";
+import { StyledBoxOne, StyledBoxTwo } from "./DataConsole.styled";
 
-import { ReactComponent as VectorFileImageOne } from "../assets/vector-file-one.svg";
-import { ReactComponent as DataSourcesImage } from "../assets/data-sources.svg";
+import { ReactComponent as VectorFileImageOne } from "../../assets/vector-file-one.svg";
+import { ReactComponent as DataSourcesImage } from "../../assets/data-sources.svg";
 
 export default function Cards() {
   return (
