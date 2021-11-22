@@ -1,11 +1,8 @@
 import React from "react";
 import { StyledNavBar, StyledNavMenu } from "./DataConsole.styled";
-import { BrowserRouter as Router, Link } from "react-router-dom";
-
 import { Box, Flex, Text, Button } from "@blend-ui/core";
 
 import { PrifinaLogo } from "../../components/PrifinaLogo";
-import { ReactComponent as HomeIcon } from "../../assets/home-icon.svg";
 
 export default function Header({ sidebar, sidebarData }) {
   return (
@@ -20,12 +17,10 @@ export default function Header({ sidebar, sidebarData }) {
           {sidebarData.map((item, index) => {
             return (
               <li key={index} className={item.class}>
-                <Router>
-                  <Link to={item.path}>
-                    {item.icon}
-                    <span>{item.title}</span>
-                  </Link>
-                </Router>
+                <a to={item.path}>
+                  {item.icon}
+                  <span>{item.title}</span>
+                </a>
               </li>
             );
           })}
