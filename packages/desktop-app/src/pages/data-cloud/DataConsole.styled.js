@@ -65,6 +65,10 @@ export const StyledNavMenu = styled.nav`
     padding: 0 16px;
     text-align: center;
   }
+
+  a {
+    cursor: pointer;
+  }
 `;
 
 export const StyledCard = styled.div`

@@ -1,13 +1,13 @@
 import React from "react";
 import { Box, Flex, Text, Button } from "@blend-ui/core";
 
-import { StyledBoxOne, StyledBoxTwo } from "./DataConsole.styled";
+import { StyledBoxOne, StyledBoxTwo, StyledCard } from "./DataConsole.styled";
 
 import { ReactComponent as VectorFileImageOne } from "../../assets/vector-file-one.svg";
 import { ReactComponent as DataSourcesImage } from "../../assets/data-sources.svg";
 
-export default function Cards() {
-  return (
+export default function Cards({ val }) {
+  return val == 1 ? (
     <>
       <StyledBoxOne>
         <div>
@@ -87,5 +87,7 @@ export default function Cards() {
         </Text>
       </StyledBoxTwo>
     </>
+  ) : (
+    <div></div>
   );
 }

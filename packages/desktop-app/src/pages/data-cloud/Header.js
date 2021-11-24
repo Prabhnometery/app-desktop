@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import { StyledNavBar, StyledNavMenu } from "./DataConsole.styled";
 import { Box, Flex, Text, Button } from "@blend-ui/core";
 
 import { PrifinaLogo } from "../../components/PrifinaLogo";
 
-export default function Header({ sidebar, sidebarData }) {
+export default function Header({
+  sidebar,
+  sidebarData,
+
+  changeVal,
+}) {
   return (
     <div>
       <StyledNavBar>
@@ -17,7 +22,7 @@ export default function Header({ sidebar, sidebarData }) {
           {sidebarData.map((item, index) => {
             return (
               <li key={index} className={item.class}>
-                <a to={item.path}>
+                <a onClick={() => changeVal(item.val)}>
                   {item.icon}
                   <span>{item.title}</span>
                 </a>

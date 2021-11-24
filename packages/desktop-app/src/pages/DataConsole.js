@@ -59,6 +59,13 @@ const DataConsole = props => {
   const dataSources = useRef({});
   const [installedDataSources, setInstalledDataSources] = useState([]);
 
+  const [val, setVal] = useState(1);
+  console.log(val);
+
+  const changeVal = value => {
+    setVal(value);
+  };
+
   const [sidebar, setSidebar] = useState(false);
 
   const showSidebar = () => setSidebar(!sidebar);
@@ -69,18 +76,21 @@ const DataConsole = props => {
       path: "/",
       icon: <HomeIcon width={"40px"} height={"20px"} />,
       class: "nav-text",
+      val: 1,
     },
     {
       title: "All Files",
       path: "/",
       icon: <AllFilesIcon width={"40px"} height={"20px"} />,
       class: "nav-text",
+      val: 2,
     },
     {
       title: "Data Cloud",
       path: "/",
       icon: <CloudIcon width={"40px"} height={"17px"} />,
       class: "nav-text",
+      val: 3,
     },
   ];
 
@@ -97,42 +107,82 @@ const DataConsole = props => {
     <>
       <GlobalStyle />
       <Box width={"100vw"} height={"100vh"}>
-        <Header sidebar={sidebar} sidebarData={sidebarData} />
-        <StyledCard>
-          <div>
-            <Text
-              textAlign={"left"}
-              textStyle={"h3"}
-              marginTop={"20px"}
-              textStyle={"h2"}
-              marginLeft={"32px"}
-            >
-              Bring all your data into Data Cloud
-            </Text>
-            <Box width={"85%"}>
+        <Header
+          sidebar={sidebar}
+          sidebarData={sidebarData}
+          changeVal={changeVal}
+        />
+
+        {/* Home Page */}
+        {val == 1 && (
+          <StyledCard>
+            <div>
               <Text
                 textAlign={"left"}
-                height={"66px"}
-                width={"20px"}
-                textStyle={"h4"}
-                marginTop={"34px"}
+                textStyle={"h3"}
+                marginTop={"20px"}
+                textStyle={"h2"}
                 marginLeft={"32px"}
-                color={"#99A0B0"}
               >
-                Your Data Cloud is the heart of your Personal Data Engine. By
-                bringing your data into your personal data cloud, you can
-                activate it in different apps in your Prifina account.
+                Bring all your data into Data Cloud
               </Text>
-            </Box>
-            <Box marginTop={"90px"} marginLeft={"32px"}>
-              <Button variation={"outline"}>Learn More</Button>
-            </Box>
-          </div>
+              <Box width={"85%"}>
+                <Text
+                  textAlign={"left"}
+                  height={"66px"}
+                  width={"20px"}
+                  textStyle={"h4"}
+                  marginTop={"34px"}
+                  marginLeft={"32px"}
+                  color={"#99A0B0"}
+                >
+                  Your Data Cloud is the heart of your Personal Data Engine. By
+                  bringing your data into your personal data cloud, you can
+                  activate it in different apps in your Prifina account.
+                </Text>
+              </Box>
+              <Box marginTop={"90px"} marginLeft={"32px"}>
+                <Button variation={"outline"}>Learn More</Button>
+              </Box>
+            </div>
+          </StyledCard>
+        )}
 
-          <div>{/* <ImageOne width={"300px"} height={"300px"} /> */}</div>
-        </StyledCard>
+        {/* All Files */}
+        {val == 2 && (
+          <StyledCard>
+            <div>
+              <Text
+                textAlign={"left"}
+                textStyle={"h3"}
+                marginTop={"20px"}
+                textStyle={"h2"}
+                marginLeft={"32px"}
+              >
+                All Files
+              </Text>
+            </div>
+          </StyledCard>
+        )}
+
+        {val == 3 && (
+          <StyledCard>
+            <div>
+              <Text
+                textAlign={"left"}
+                textStyle={"h3"}
+                marginTop={"20px"}
+                textStyle={"h2"}
+                marginLeft={"32px"}
+              >
+                Data Cloud
+              </Text>
+            </div>
+          </StyledCard>
+        )}
+
         <div className="card">
-          <Cards />
+          <Cards val={val} />
         </div>
       </Box>
     </>
