@@ -116,3 +116,64 @@ export const StyledBoxTwo = styled.div`
   width: 695px;
   height: 540px;
 `;
+
+export const StyledTabs = styled.div`
+  display: flex;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+
+  margin-top: 1px;
+  margin-left: 20%;
+  padding: 40px;
+  width: 75%;
+
+  @media (max-width: 100px) {
+    flex-direction: column;
+  }
+`;
+
+export const StyledBoxDataOne = styled.div`
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  align-items: center;
+  background-color: #ffffff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  margin-top: 90px;
+  margin-left: 40%;
+
+  width: 450px;
+  height: 250px;
+`;
+
+export const StyledBoxDataTwo = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffff;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  margin-top: -250px;
+  margin-left: 85%;
+
+  width: 450px;
+  height: 250px;
+`;
+
+export const StyledBoxDataThree = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #f9f9f9;
+  border-radius: 15px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  margin-top: -300px;
+  margin-left: 130%;
+
+  width: 450px;
+  height: 300px;
+`;
