@@ -1,16 +1,17 @@
 import React from "react";
-import "./Tabs.css";
+import { StyledTab } from "./DataConsole.styled";
 
-const Tabs = () => {
+const Tabs = ({ changeTab }) => {
   return (
-    <div className="Tabs">
-      {/* Tab nav */}
-      <ul className="nav">
-        <li>Available Sources (3)</li>
-        <li>Connected Sources (1)</li>
-      </ul>
-      <div className="outlet">{/* content will be shown here */}</div>
-    </div>
+    <StyledTab>
+      <div className="Tabs">
+        {/* Tab nav */}
+        <ul className="nav">
+          <li onClick={() => changeTab(1)}>Available Sources (3)</li>
+          <li onClick={() => changeTab(2)}>Connected Sources (1)</li>
+        </ul>
+      </div>
+    </StyledTab>
   );
 };
 export default Tabs;

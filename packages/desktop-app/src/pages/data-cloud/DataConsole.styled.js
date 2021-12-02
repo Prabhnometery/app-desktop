@@ -167,13 +167,65 @@ export const StyledBoxDataThree = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #f9f9f9;
+  background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
   padding: 20px;
-  margin-top: -300px;
+  margin-top: -250px;
   margin-left: 130%;
 
   width: 450px;
-  height: 300px;
+  height: 250px;
+`;
+
+export const StyledTab = styled.div`
+  ul.nav {
+    width: 60%;
+    margin: 0 auto 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid rgba(0, 132, 122, 0.1);
+    background-color: rgba(0, 132, 122, 0.1);
+    border-radius: 2rem;
+    @media (max-width: 768px) {
+      width: 90%;
+    }
+  }
+  ul.nav li {
+    width: 50%;
+    padding: 1rem;
+    list-style: none;
+    text-align: center;
+    cursor: pointer;
+    transition: all 0.7s;
+    border-bottom-left-radius: 2rem;
+    border-top-left-radius: 2rem;
+  }
+  ul.nav li:nth-child(2) {
+    border-radius: 0;
+    border-bottom-right-radius: 2rem;
+    background: #00847a;
+    border-top-right-radius: 2rem;
+  }
+  ul.nav li:hover {
+    background: #00847a;
+    color: white;
+  }
+  ul.nav li.active {
+    background: #00847a;
+  }
+
+  .Tabs {
+    width: 80%;
+    height: auto;
+    min-height: 400px;
+    margin: 3.5rem 25rem 2.5rem;
+    padding: 2rem 1rem;
+    color: black;
+    border-radius: 2rem;
+    @media (max-width: 769px) {
+      padding: 2rem 0;
+    }
+  }
 `;
